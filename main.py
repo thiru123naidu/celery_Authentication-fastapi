@@ -22,7 +22,7 @@ fake_db={"username": "naidu","password": "pual"}
 def get_token_login(form_data: Annotated[OAuth2PasswordRequestForm, Depends()]):
    
     data={"username":form_data.username, "password":form_data.password}
-    print(data)
+    
     if data:
          return {
             "access_token": token_jeneration(data),
